@@ -1,0 +1,26 @@
+<html>
+
+    <script type="text/javascript">
+    var canvas, ctx, flag = false,
+        prevX = 0,
+        currX = 0,
+        prevY = 0,
+        currY = 0,
+        dot_flag = false;
+
+
+    function init() {
+        canvas = document.getElementById('can');
+        ctx = canvas.getContext("2d");
+        w = canvas.width;
+        h = canvas.height;
+
+        }
+
+    </script>
+
+<body onload="init()">
+        <canvas id="can" width="256" height="256" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>       
+        <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;"> 
+        </body>
+  </html>
