@@ -4,12 +4,16 @@
 <center>
     <link rel="stylesheet" href="style.css">
      <title>BeatTheAI.io</title>
-        <h1>BeatTheAI.io - a Francis Parker/WAR lords Hackathon Project</h1>
+        <h1>BeatTheAI.io</h1>
+        <div id="studentInfo" style="visibility: visible">
+
         <p>DNHS Students Nolan, Abhinav, Raadwan, Alvin</p>
+        <h2 id="roleInfo">Select Your Role</h2>
+
+        </div>
 
         
 
-        <h2>Select Your Role</h2>
         <button id="drawerButton" type="button" onclick="drawerOnClick()">Drawer</button>
         <button id="guesserButton" type="button" onclick="guesserOnClick()">Guesser</button>
 
@@ -19,13 +23,16 @@
 <script type="text/javascript">
 function drawerOnClick() {
     document.getElementById('drawer').style.visibility= "visible" ;
+    document.getElementById('studentInfo').style.visibility= "hidden" ;
+    document.getElementById('roleInfo').style.visibility= "hidden" ;
     document.getElementById('guesserButton').style.visibility= "hidden" ;
     document.getElementById('drawerButton').style.visibility= "hidden" ;
 
 }
 function guesserOnClick() {
     document.getElementById('guesser').style.visibility= "visible" ;
-    
+    document.getElementById('studentInfo').style.visibility= "hidden" ;
+    document.getElementById('roleInfo').style.visibility= "hidden" ;
     document.getElementById('guesserButton').style.visibility= "hidden" ;
     document.getElementById('drawerButton').style.visibility= "hidden" ;
 
@@ -97,7 +104,7 @@ function guesserOnClick() {
         var dataURL = canvas.toDataURL();
         document.getElementById("canvasimg").src = dataURL;
         document.getElementById("canvasimg").style.display = "inline";
-        console.log(dataURL)
+        
     }
     
     function findxy(res, e) {
@@ -148,11 +155,15 @@ function guesserOnClick() {
 
             <script type="text/javascript">
                 <h1>Guesser</h1>
+
+                function saveFinal() {
+                    
+                }
             </script>
 
      <body onload="init()">
 
-                 <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
+        <img id="canvasimg" style="position:absolute;top:10%;left:52%;">
 
 
         </body>
