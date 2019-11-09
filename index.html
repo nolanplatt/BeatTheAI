@@ -98,16 +98,7 @@ function guesserOnClick() {
         
     }
     
-    function save() {
-        
-        document.getElementById("canvasimg").style.border = "2px solid";
-        var dataURL = canvas.toDataURL();
-        document.getElementById("canvasimg").src = dataURL;
-        document.getElementById("canvasimg").style.display = "inline";
-
-        saveFinal(dataURL)
-        
-    }
+    
     
     function findxy(res, e) {
         if (res == 'down') {
@@ -158,9 +149,7 @@ function guesserOnClick() {
             <script type="text/javascript">
                 <h1>Guesser</h1>
 
-                function saveFinal(dataURL) {
-                    console.log("Save Final: " + dataURL)
-                }
+                
             </script>
 
      <body onload="init()">
@@ -169,6 +158,10 @@ function guesserOnClick() {
 
 
         </body>
+        <script>
+            
+
+        </script>
 
             </div>
     </html>
