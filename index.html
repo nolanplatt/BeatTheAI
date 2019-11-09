@@ -104,6 +104,8 @@ function guesserOnClick() {
         var dataURL = canvas.toDataURL();
         document.getElementById("canvasimg").src = dataURL;
         document.getElementById("canvasimg").style.display = "inline";
+
+        saveFinal(dataURL)
         
     }
     
@@ -156,8 +158,8 @@ function guesserOnClick() {
             <script type="text/javascript">
                 <h1>Guesser</h1>
 
-                function saveFinal() {
-                    
+                function saveFinal(dataURL) {
+                    console.log("Save Final: " + dataURL)
                 }
             </script>
 
