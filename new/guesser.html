@@ -6,24 +6,30 @@
         <center>
             <link rel="stylesheet" href="style.css">
             <title>BeatTheAI.io</title>
-            <h1>BeatTheAI.io</h1>
+            <h1>Guesser</h1>
 
             <p>Created by DNHS Students: Raadwan, Alvin, Nolan, Abhinav</p>
-            <h2 id="roleInfo">Select Your Role:</h2>
+            <h2 id="roleInfo">Word:</h2>
             
-            <button>
-            <a href="./drawer.html" class="myButton" style="text-decoration: none;">Drawer</a>
-            </button>
-            <button>
-            <a href="./guesser.html" class="myButton" style="text-decoration: none;">Guesser</a>
-            </button>
-        </center>
+            <script type="text/javascript">
+
+
+                var canvas, ctx, flag = false,
+                    prevX = 0,
+                    currX = 0,
+            
+                    prevY = 0,
+                    currY = 0,
+                    dot_flag = false;
+            
+                </script>
+                <body onload="init()">
+                <center>
+                    <canvas id="can" width="256" height="256" style="position:relative;top:10%;border:2px solid;"></canvas>        
+                   
+                </center>
+                </body>   
+            </center>
     </head>
 
-    <center>
-        <h3>   </h3>
-        <h5>
-            <img src="img/optixlogo.jpg" alt="">
-        </h5>
-    </center>
 </html>
