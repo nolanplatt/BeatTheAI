@@ -8,6 +8,162 @@
                 <img src="img/optix.jpg" alt="">
             </a>
         </div>
+<<<<<<< HEAD
+
+        
+
+        <button id="drawerButton" type="button" onclick="drawerOnClick()">Drawer</button>
+        <button id="guesserButton" type="button" onclick="guesserOnClick()">Guesser</button>
+
+
+</center>
+
+<script type="text/javascript">
+function drawerOnClick() {
+    document.getElementById('drawer').style.visibility= "visible" ;
+    document.getElementById('studentInfo').style.visibility= "hidden" ;
+    document.getElementById('roleInfo').style.visibility= "hidden" ;
+    document.getElementById('guesserButton').style.visibility= "hidden" ;
+    document.getElementById('drawerButton').style.visibility= "hidden" ;
+
+}
+function guesserOnClick() {
+    document.getElementById('guesser').style.visibility= "visible" ;
+    document.getElementById('studentInfo').style.visibility= "hidden" ;
+    document.getElementById('roleInfo').style.visibility= "hidden" ;
+    document.getElementById('guesserButton').style.visibility= "hidden" ;
+    document.getElementById('drawerButton').style.visibility= "hidden" ;
+
+
+
+}
+</script>
+<div id="drawer" style="visibility: hidden">
+
+    <script type="text/javascript">
+
+
+    var canvas, ctx, flag = false,
+        prevX = 0,
+        currX = 0,
+
+        prevY = 0,
+        currY = 0,
+        dot_flag = false;
+
+    var x = "black",
+        y = 2;
+    
+    function init() {
+        canvas = document.getElementById('can');
+        ctx = canvas.getContext("2d");
+        w = canvas.width;
+        h = canvas.height;
+    
+        canvas.addEventListener("mousemove", function (e) {
+            findxy('move', e)
+        }, false);
+        canvas.addEventListener("mousedown", function (e) {
+            findxy('down', e)
+        }, false);
+        canvas.addEventListener("mouseup", function (e) {
+            findxy('up', e)
+        }, false);
+        canvas.addEventListener("mouseout", function (e) {
+            findxy('out', e)
+        }, false);
+    }
+    
+    function color(obj) {
+        x = "black";
+    
+    }
+    
+    function draw() {
+        ctx.beginPath();
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(currX, currY);
+        ctx.strokeStyle = x;
+        ctx.lineWidth = y;
+        ctx.stroke();
+        ctx.closePath();
+        save();
+    }
+    
+    function erase() {
+            ctx.clearRect(0, 0, w, h);
+            document.getElementById("canvasimg").style.display = "none";
+        
+    }
+    
+    
+    
+    function findxy(res, e) {
+        if (res == 'down') {
+            prevX = currX;
+            prevY = currY;
+            currX = e.clientX - canvas.offsetLeft;
+            currY = e.clientY - canvas.offsetTop;
+    
+            flag = true;
+            dot_flag = true;
+            if (dot_flag) {
+                ctx.beginPath();
+                ctx.fillStyle = x;
+                ctx.fillRect(currX, currY, 2, 2);
+                ctx.closePath();
+                dot_flag = false;
+            }
+        }
+        if (res == 'up' || res == "out") {
+            flag = false;
+        }
+        if (res == 'move') {
+            if (flag) {
+                prevX = currX;
+                prevY = currY;
+                currX = e.clientX - canvas.offsetLeft;
+                currY = e.clientY - canvas.offsetTop;
+                draw();
+            }
+        }
+    }
+    
+    
+    </script>
+    <body onload="init()">
+
+                <canvas id="can" width="256" height="256" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>        
+                <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
+ 
+
+        
+    </body>
+</div>
+
+
+    <div id="guesser" style="visibility: hidden">
+
+            <script type="text/javascript">
+                <h1>Guesser</h1>
+
+                
+            </script>
+
+     <body onload="init()">
+
+        <img id="canvasimg" style="position:absolute;top:10%;left:52%;">
+
+
+        </body>
+        <script>
+            
+
+        </script>
+
+            </div>
+    </html>
+=======
         <center>
             <link rel="stylesheet" href="style.css">
             <title>BeatTheAI.io</title>
@@ -32,3 +188,4 @@
         </h5>
     </center>
 </html>
+>>>>>>> origin/master
