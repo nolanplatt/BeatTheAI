@@ -1,6 +1,6 @@
 # BeatTheAI
 
-End result of the 12 hour hackathon hosted by Francis Parker School  
+End result of the 12 hour hackathon hosted by Francis Parker School on November 9, 2019 
 
 Team:  
 Alvin Zheng, Abhinav Palacharla, Nolan Platt, Raadwan Masum
@@ -19,3 +19,6 @@ RCNN Model: Contains the AI and everything used to train it
 BeatTheAIBackend: Contains the flask server used to host the game, and all frontend elements
 
 XMLlabel: Python program used to automate label creation for dataset
+
+
+Copyright(c) Del Norte Computing 2019. All rights reserved. 
